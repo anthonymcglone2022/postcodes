@@ -20,6 +20,11 @@ public class PostCodeController {
         return service.savePostCode(postCode);
     }    
 
+    @GetMapping("/regexValidationPostCode/{postCode}")
+    public boolean regexValidationPostCode(@PathVariable String postCode) {
+        return validatorService.validate(postCode);
+    }
+ 
     @GetMapping("/formatPostCode/{postCode}")
     public String formatPostCode(@PathVariable String postCode) {
         return validatorService.format(postCode);
