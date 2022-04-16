@@ -8,7 +8,7 @@ A RESTful API with Spring Boot, JPA, Hibernate and MySQL
 
 Pre-Reqs: Create a local MySQL database called 'postcode', with root user and 'toor' password
 
-This sample project can be run on the command line with *mvn spring-boot:run* OR 
+This sample project can be run on the command line with **mvn spring-boot:run** OR 
 it can be imported to Spring Tool Suite (or Eclipse) and run within it.
 
 Use Postman to add items to the 'postcode' db. An example:
