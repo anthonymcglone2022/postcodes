@@ -6,7 +6,7 @@ A RESTful API with Spring Boot, JPA, Hibernate and MySQL
 
 => A CRUD prototype for storing UK Postcodes
 
-**Pre-Reqs:** Create a local MySQL database called 'postcode', with root user and 'toor' password
+**Pre-Reqs:** Create a local MySQL instance, with root user and 'toor' password (OR edit the application.properties user/ schema.sql)
 
 **Pre-Reqs:** Install Maven 3 and Java 11
 
