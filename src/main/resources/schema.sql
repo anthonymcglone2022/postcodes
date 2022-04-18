@@ -1,0 +1,14 @@
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+--CREATE DATABASE postcode;
+
+USE postcode;
+
+CREATE TABLE post_code (
+    id   INTEGER      NOT NULL AUTO_INCREMENT,
+    code VARCHAR(128) NOT NULL,
+    inuse VARCHAR(128) NOT NULL,
+    district VARCHAR(128) NOT NULL,
+    PRIMARY KEY (id)
+);

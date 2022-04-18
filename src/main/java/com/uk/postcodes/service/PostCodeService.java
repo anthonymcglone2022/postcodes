@@ -29,8 +29,8 @@ public class PostCodeService {
         return repository.findById(id).orElse(null);
     }
 
-    public PostCode getPostCodeByOuterCode(String outerCode) {
-        return repository.findByOuterCode(outerCode);
+    public PostCode getPostCodeByCode(String code) {
+        return repository.findByCode(code);
     }    
     
     public String deletePostCode(int id) {
@@ -40,12 +40,11 @@ public class PostCodeService {
 
     public PostCode updatePostCode(PostCode postCode) {
     	PostCode existingPostCode = repository.findById(postCode.getId()).orElse(null);
-        existingPostCode.setPostCode(postCode.getPostCode());
+        existingPostCode.setCode(postCode.getCode());
         
-        existingPostCode.setOuterCode(postCode.getOuterCode());
-        existingPostCode.setInnerCode(postCode.getInnerCode());
+        existingPostCode.setInuse(postCode.getInuse());
+        existingPostCode.setDistrict(postCode.getDistrict());
         return repository.save(existingPostCode);
     }    
-    
     
 }

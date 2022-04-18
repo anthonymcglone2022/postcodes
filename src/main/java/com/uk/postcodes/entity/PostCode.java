@@ -19,7 +19,7 @@ public class PostCode {
     @Id
     @GeneratedValue
     private int id;
-    private String postCode;
-    private String outerCode;
-    private String innerCode;
+    private String code;
+    private String inuse;
+    private String district;
 }
