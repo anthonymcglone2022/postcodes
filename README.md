@@ -17,7 +17,7 @@ Use Postman to add items to the 'postcode' db. An example:
 
 POST http://localhost:9191/addPostCode
 {
-    "postCode": "W5 1AT",
-    "outerCode": "W5",
-    "innerCode": "1AT"
+    "code": "W5 1AT",
+    "inuse": "Yes",
+    "district": "Ealing"
 }
