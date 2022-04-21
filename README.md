@@ -1,10 +1,10 @@
-What is com.uk.postcodes?
+What is **com.uk.postcodes**?
 
 A RESTful API with Spring Boot, JPA, Hibernate and MySQL
 
 => Can be used to validate any UK Postcode (on initilization, we read in 2 million postcodes from data.sql)
 
-=> A CRUD prototype for storing UK Postcodes (ADD, DELETE)
+=> A CRUD prototype for storing UK Postcodes (CREATE, DELETE)
 
 **Pre-Reqs:** Create a local MySQL instance, with root user and 'toor' password (OR edit the application.properties user/ schema.sql)
 
