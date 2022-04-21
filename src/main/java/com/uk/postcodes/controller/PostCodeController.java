@@ -17,12 +17,22 @@ public class PostCodeController {
 
     @PostMapping("/addPostCode")
     public PostCode addPostCode(@RequestBody PostCode postCode) {
-        return service.savePostCode(postCode);
+	return service.savePostCode(postCode);
     }    
 
-    @GetMapping("/regexValidationPostCode/{postCode}")
+    @PostMapping("/deletePostCode/{postCode}")
+    public Integer deletePostCode(@PathVariable String postCode) {
+	return service.deletePostCode(postCode);
+    }    
+
+    @GetMapping("/regexValidate/{postCode}")
     public boolean regexValidationPostCode(@PathVariable String postCode) {
-        return validatorService.validate(postCode);
+        return validatorService.regexValidate(postCode);
+    }
+
+    @GetMapping("/databaseValidate/{postCode}")
+    public PostCode dbValidationPostCode(@PathVariable String postCode) {
+        return validatorService.dbValidate(postCode);
     }
  
     @GetMapping("/formatPostCode/{postCode}")

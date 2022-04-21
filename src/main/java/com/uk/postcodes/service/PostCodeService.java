@@ -1,5 +1,5 @@
 package com.uk.postcodes.service;
-
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +9,7 @@ import com.uk.postcodes.repository.PostCodeRepository;
 import java.util.List;
 
 @Service
+@Transactional
 public class PostCodeService {
     @Autowired
     private PostCodeRepository repository;
@@ -25,26 +26,12 @@ public class PostCodeService {
         return repository.findAll();
     }
 
-    public PostCode getPostCodeById(int id) {
-        return repository.findById(id).orElse(null);
-    }
-
     public PostCode getPostCodeByCode(String code) {
         return repository.findByCode(code);
     }    
     
-    public String deletePostCode(int id) {
-        repository.deleteById(id);
-        return "postcode was removed for ID: " + id;
+    public Integer deletePostCode(String postCode) {
+        return repository.deleteByCode(postCode);
     }
 
-    public PostCode updatePostCode(PostCode postCode) {
-    	PostCode existingPostCode = repository.findById(postCode.getId()).orElse(null);
-        existingPostCode.setCode(postCode.getCode());
-        
-        existingPostCode.setInuse(postCode.getInuse());
-        existingPostCode.setDistrict(postCode.getDistrict());
-        return repository.save(existingPostCode);
-    }    
-    
 }

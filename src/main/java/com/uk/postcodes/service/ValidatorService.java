@@ -3,6 +3,9 @@ package com.uk.postcodes.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.uk.postcodes.entity.PostCode;
+import com.uk.postcodes.repository.PostCodeRepository;
+
 import java.util.List;
 import java.util.regex.*;
 
@@ -14,8 +17,10 @@ public class ValidatorService {
 
 	String NON_ALPHA_NUMERICS = "[^a-zA-Z0-9]+";
 
-    	public String format(String postCode) {
+        @Autowired
+        private PostCodeRepository repository;
 
+    	public String format(String postCode) {
 		postCode = postCode.trim();
 		postCode = postCode.replaceAll(NON_ALPHA_NUMERICS, "");
 
@@ -29,14 +34,14 @@ public class ValidatorService {
         	return outwardCode + " " + inwardCode;
     	}    
 
-
-	public boolean validate(String postCode) {
-		postCode = this.format(postCode);
+	public boolean regexValidate(String postCode) {
                 Pattern p = Pattern.compile(VALIDATING_REGEX);
                 Matcher m = p.matcher(postCode);
                 return m.matches();		
 	}
 
-
+	public PostCode dbValidate(String postCode) {
+                return repository.findByCode(postCode);         		
+	}
 
 }
