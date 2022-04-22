@@ -1,4 +1,5 @@
 package com.uk.postcodes.service;
+
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,4 +35,15 @@ public class PostCodeService {
         return repository.deleteByCode(postCode);
     }
 
+    public boolean updatePostCode(PostCode postCode) {
+        PostCode existingProduct = repository.findByCode(postCode.getCode());
+	if(existingProduct == null) {
+	    return false;
+	}
+
+        existingProduct.setInuse(postCode.getInuse());
+        existingProduct.setDistrict(postCode.getDistrict());
+        repository.save(existingProduct);
+	return true;
+    } 
 }
