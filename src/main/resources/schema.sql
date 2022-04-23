@@ -3,7 +3,10 @@ FLUSH PRIVILEGES;
 
 --CREATE DATABASE postcode;
 
+
 USE postcode;
+DROP TABLE IF EXISTS post_code;
+
 
 CREATE TABLE post_code (
     id   INTEGER      NOT NULL AUTO_INCREMENT,
