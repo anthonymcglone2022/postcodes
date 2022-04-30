@@ -12,9 +12,6 @@ public class PostCodeController {
     @Autowired
     private PostCodeService service;
 
-    @Autowired
-    private ValidatorService validatorService;
-
     @PostMapping("/createPostCode")
     public PostCode addPostCode(@RequestBody PostCode postCode) {
 	return service.savePostCode(postCode);
@@ -30,18 +27,4 @@ public class PostCodeController {
         return service.updatePostCode(postCode);
     }
 
-    @GetMapping("/checkViaRegex/{postCode}")
-    public boolean regexValidationPostCode(@PathVariable String postCode) {
-        return validatorService.regexValidate(postCode);
-    }
-
-    @GetMapping("/checkViaDatabase/{postCode}")
-    public PostCode dbValidationPostCode(@PathVariable String postCode) {
-        return validatorService.dbValidate(postCode);
-    }
- 
-    @GetMapping("/formatPostCode/{postCode}")
-    public String formatPostCode(@PathVariable String postCode) {
-        return validatorService.format(postCode);
-    }    
 }
