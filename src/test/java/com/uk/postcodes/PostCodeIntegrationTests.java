@@ -16,7 +16,7 @@ import com.uk.postcodes.controller.PostCodeController;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-class PostCodeTests {
+class PostCodeIntegrationTests {
 
 	@Autowired
 	PostCodeController postCodeController;
