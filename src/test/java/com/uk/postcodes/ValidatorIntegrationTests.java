@@ -22,7 +22,24 @@ class ValidatorIntegrationTests {
 	ValidatorController validatorController;
 
 	@Test
-	void validateACorrectPostCode() {
+	void validateACorrectPostCodeViaRegex() {
 		Assertions.assertThat(validatorController.regexValidationPostCode("W5 1AT")).isTrue();
 	}
+
+	@Test
+	void validateAnIncorrectPostCodeViaRegex() {
+		Assertions.assertThat(validatorController.regexValidationPostCode("NON EXAMPLE")).isFalse();
+	}
+
+	@Test
+	void validateAPostCodeViaTheDatabase() {
+		Assertions.assertThat(validatorController.dbValidationPostCode("AL9 7UG")).isNotNull();
+	}
+
+	@Test
+	void formatAPostCodeWithTheFormatter() {
+		Assertions.assertThat(validatorController.formatPostCode("al97ug")).isEqualTo("AL9 7UG");
+	}
+
+
 }

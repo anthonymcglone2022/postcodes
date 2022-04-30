@@ -24,11 +24,24 @@ class PostCodeIntegrationTests {
 	@Test
 	void createAPostCode() {
 		PostCode postCode = new PostCode();
-		postCode.setCode("W5 1AT");
+		postCode.setCode("PCRN 1ZZ");
 		postCode.setInuse("Yes");
-        	postCode.setDistrict("Ealing");
-
+        	postCode.setDistrict("Pitcairn Islands");
 		Object returnedPostCode = postCodeController.addPostCode(postCode);
 	        Assertions.assertThat(returnedPostCode).isNotNull();
+	}
+
+	@Test
+	void updateAPostCode() {
+		PostCode postCode = new PostCode();
+		postCode.setCode("AL9 7YZ");
+		postCode.setInuse("No");
+        	postCode.setDistrict("Welwyn Hatfield");
+		Assertions.assertThat(postCodeController.updatePostCode(postCode)).isTrue();
+	}
+
+	@Test
+	void deleteAPostCode() {
+		Assertions.assertThat(postCodeController.deletePostCode("AL9 7ZG").intValue()).isEqualTo(1);
 	}
 }
