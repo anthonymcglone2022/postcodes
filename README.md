@@ -4,7 +4,7 @@ A RESTful API with Spring Boot, JPA, Hibernate and MySQL
 
 => Can be used to validate any UK Postcode (on initilization, we read in 2 million postcodes from data.sql)
 
-=> A CRUD prototype for storing UK Postcodes (CREATE, DELETE)
+=> A CRUD prototype for storing UK Postcodes 
 
 **Pre-Reqs:** Create a local MySQL instance, with root user and 'toor' password (OR edit the application.properties user/ schema.sql)
 
@@ -30,7 +30,7 @@ RETURNS JSON {"id": generatedIntegerId, "code": "W5 1AT","inuse": "Yes","distric
 
 **2 - REMOVE a postcode**
 
-POST http://localhost:9191//deletePostCode/{postcode}
+POST http://localhost:9191/deletePostCode/{postcode}
 
 i.e.  deletePostCode/W5 1AT
 
@@ -46,7 +46,7 @@ POST http://localhost:9191/updatePostCode
     "district": "Some district in London"
 }
 
-RETURNS JSON {"id": databaseEntitysId, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
+RETURNS JSON {"id": databaseRecordId, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
 
 
 **4 - CHECK if a postcode is in the database**
