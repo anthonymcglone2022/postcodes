@@ -11,7 +11,7 @@ A RESTful API with Spring Boot, JPA, Hibernate and MySQL
 **Pre-Reqs:** Install Maven 3 and Java 11
 
 This sample project can be run on the command line with **mvn spring-boot:run** OR 
-it can be imported to Spring Tool Suite (Eclipse or any IDE) and run within it. TESTS: can be run with **mvn clean test**
+it can be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. TESTS: can be run with **mvn clean test**
 
 **API Usage:** You can use Postman to add items to the 'postcode' db.
 
