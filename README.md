@@ -64,7 +64,7 @@ GET http://localhost:9191/checkViaRegex/{postCode}
 
 i.e. checkViaRegex/W5 1AT
 
-RETURNS boolean TRUE if in the correct format, FALSE if not
+RETURNS boolean TRUE if postcode follows all formatting rules, FALSE if not
 
 
 **6 - Format a post code (capitalizes, adds space between outer and inner code, removes non alphanumerics etc.)**
