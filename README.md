@@ -25,7 +25,7 @@ POST http://localhost:9191/createPostCode
     "district": "Ealing"
 }
 
-RETURNS JSON {"code": "W5 1AT","inuse": "Yes","district": "Ealing"}
+RETURNS JSON {"id": generatedIntegerId, "code": "W5 1AT","inuse": "Yes","district": "Ealing"}
 
 
 **2** - REMOVE a postcode
@@ -46,7 +46,7 @@ POST http://localhost:9191/updatePostCode
     "district": "Some district in London"
 }
 
-RETURNS JSON {"code": "W5 1AT","inuse": "No","district": "Some district in London"}
+RETURNS JSON {"id": databaseEntitysId, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
 
 
 **4** - CHECK if a postcode is in the database
