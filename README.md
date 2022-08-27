@@ -17,8 +17,6 @@
 
 ## **API Usage:** 
 
-- You can use Postman to add items to the 'postcode' db.
-
 **1. ADD a postcode**
 ```html
 POST http://localhost:9191/createPostCode
@@ -28,7 +26,7 @@ POST http://localhost:9191/createPostCode
     "district": "Ealing"
 }
 ```
-RETURNS 201 HTTP Status
+RETURNS 201 HTTP Status<br/>
 RETURNS JSON
 ```html
  {"id": generatedIntegerId, "code": "W5 1AT","inuse": "Yes","district": "Ealing"}
@@ -42,7 +40,7 @@ POST http://localhost:9191/deletePostCode/{postcode}
 ```
 i.e.  deletePostCode/W5 1AT
 
-RETURNS 200 HTTP Status
+RETURNS 200 HTTP Status<br/>
 RETURNS Integer
 ```html
 1 if deleted
