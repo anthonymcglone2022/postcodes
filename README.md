@@ -17,7 +17,7 @@
 
 ## **API Usage:** 
 
-<font size="15">**1. ADD a postcode**<font/>
+**1. ADD a postcode**
 ```html
 POST http://localhost:9191/createPostCode
 {
@@ -32,6 +32,7 @@ RETURNS **JSON**
  {"id": 1, "code": "W5 1AT","inuse": "Yes","district": "Ealing"}
 ```
 
+---
 
 **2. REMOVE a postcode**
 
@@ -49,6 +50,7 @@ RETURNS **Integer**
 0 if not
 ```
 
+---
 
 **3. UPDATE a postcode**
 ```html
