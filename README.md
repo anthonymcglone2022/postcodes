@@ -13,7 +13,7 @@
 
 - Run **mvn spring-boot:run** on the command line*
 
-*the project can be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. TESTS can be run with **mvn clean test**
+*the project can also be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. TESTS can be run with **mvn clean test**
 
 ## **API Usage:** 
 
@@ -21,15 +21,18 @@
 
 
 **1 - ADD a postcode**
-
+```html
 POST http://localhost:9191/createPostCode
 {
     "code": "W5 1AT",
     "inuse": "Yes",
     "district": "Ealing"
 }
-
-RETURNS JSON {"id": generatedIntegerId, "code": "W5 1AT","inuse": "Yes","district": "Ealing"}
+```
+Returns 201 HTTP Status
+```html
+ {"id": generatedIntegerId, "code": "W5 1AT","inuse": "Yes","district": "Ealing"}
+```
 
 
 **2 - REMOVE a postcode**
