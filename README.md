@@ -26,10 +26,10 @@ POST http://localhost:9191/createPostCode
     "district": "Ealing"
 }
 ```
-RETURNS 201 HTTP Status<br/>
-RETURNS JSON
+RETURNS **201** HTTP Status<br/>
+RETURNS **JSON**
 ```html
- {"id": generatedIntegerId, "code": "W5 1AT","inuse": "Yes","district": "Ealing"}
+ {"id": 1, "code": "W5 1AT","inuse": "Yes","district": "Ealing"}
 ```
 
 
@@ -40,8 +40,8 @@ POST http://localhost:9191/deletePostCode/{postcode}
 ```
 i.e.  deletePostCode/W5 1AT
 
-RETURNS 200 HTTP Status<br/>
-RETURNS Integer
+RETURNS **200** HTTP Status<br/>
+RETURNS **Integer**
 ```html
 1 if deleted
 0 if not
@@ -49,16 +49,19 @@ RETURNS Integer
 
 
 **3. UPDATE a postcode**
-
+```html
 POST http://localhost:9191/updatePostCode
 {
     "code": "W5 1AT",
     "inuse": "No",
     "district": "Some district in London"
 }
-
-RETURNS JSON {"id": databaseRecordId, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
-
+```
+RETURNS **200** HTTP Status<br/>
+RETURNS **JSON**
+```html
+{"id": databaseRecordId, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
+```
 
 **4. CHECK if a postcode is in the database**
 
