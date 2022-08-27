@@ -6,8 +6,8 @@
 
 ## Pre-requisites before building the project
 
-1. Create a local MySQL instance, with user **root** and password **toor** (OR edit the application.properties user/ schema.sql with your DB's credentials)
-2. Install Maven 3 and Java 11
+- Create a local MySQL instance, with user **root** and password **toor** (OR edit the application.properties user/ schema.sql with your DB's credentials)
+- Install Maven 3 and Java 11
 
 ## Building the project
 
@@ -19,8 +19,7 @@
 
 - You can use Postman to add items to the 'postcode' db.
 
-
-**1 - ADD a postcode**
+**1. ADD a postcode**
 ```html
 POST http://localhost:9191/createPostCode
 {
@@ -29,22 +28,29 @@ POST http://localhost:9191/createPostCode
     "district": "Ealing"
 }
 ```
-Returns 201 HTTP Status
+RETURNS 201 HTTP Status
+RETURNS JSON
 ```html
  {"id": generatedIntegerId, "code": "W5 1AT","inuse": "Yes","district": "Ealing"}
 ```
 
 
-**2 - REMOVE a postcode**
+**2. REMOVE a postcode**
 
+```html
 POST http://localhost:9191/deletePostCode/{postcode}
-
+```
 i.e.  deletePostCode/W5 1AT
 
-RETURNS Integer 1 if deleted, 0 if not
+RETURNS 200 HTTP Status
+RETURNS Integer
+```html
+1 if deleted
+0 if not
+```
 
 
-**3 - UPDATE a postcode**
+**3. UPDATE a postcode**
 
 POST http://localhost:9191/updatePostCode
 {
@@ -56,7 +62,7 @@ POST http://localhost:9191/updatePostCode
 RETURNS JSON {"id": databaseRecordId, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
 
 
-**4 - CHECK if a postcode is in the database**
+**4. CHECK if a postcode is in the database**
 
 GET http://localhost:9191/checkViaDatabase/{postCode}
 
@@ -65,7 +71,7 @@ i.e. checkViaDatabase/W5 1AT
 RETURNS Integer 1 if found, 0 if false
 
 
-**5 - CHECK if a postcode follows all the formatting rules (e.g like Q,V,X not being in the first position etc.)** 
+**5. CHECK if a postcode follows all the formatting rules (e.g like Q,V,X not being in the first position etc.)** 
 
 GET http://localhost:9191/checkViaRegex/{postCode}
 
@@ -74,7 +80,7 @@ i.e. checkViaRegex/W5 1AT
 RETURNS boolean TRUE if postcode follows all formatting rules, FALSE if not
 
 
-**6 - Format a post code (capitalizes, adds space between outer and inner code, removes non alphanumerics etc.)**
+**6. Format a post code (capitalizes, adds space between outer and inner code, removes non alphanumerics etc.)**
 
 GET http://localhost:9191/formatPostCode/{postCode}
 
