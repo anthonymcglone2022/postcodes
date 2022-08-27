@@ -38,8 +38,10 @@ RETURNS **JSON**
 ```html
 POST http://localhost:9191/deletePostCode/{postcode}
 ```
-i.e.  deletePostCode/W5 1AT
-
+e.g. 
+```html
+POST http://localhost:9191/deletePostCode/W5 1AT
+```
 RETURNS **200** HTTP Status<br/>
 RETURNS **Integer**
 ```html
