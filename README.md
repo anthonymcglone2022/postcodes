@@ -1,17 +1,23 @@
-# What is the **postcodes** repository?
+# What is the postcodes repository?
 
-- A CRUD prototype for storing UK Postcodes
-- Can be used to validate any UK Postcode (on initilization, we read in 2 million postcodes from data.sql)
-- A RESTful API with Spring Boot, JPA, Hibernate and MySQL
+- A RESTful API with a database for storing UK Postcodes
+- Can be used to validate any UK Postcode (**on initilization, we read in 2 million postcodes from data.sql**)
+- Technology built with Spring Boot, JPA, Hibernate and MySQL
 
-**Pre-Reqs:** Create a local MySQL instance, with root user and 'toor' password (OR edit the application.properties user/ schema.sql)
+## Pre-requisites before building the project
 
-**Pre-Reqs:** Install Maven 3 and Java 11
+1. Create a local MySQL instance, with root user and 'toor' password (OR edit the application.properties user/ schema.sql)
+2. Install Maven 3 and Java 11
 
-This sample project can be run on the command line with **mvn spring-boot:run** OR 
-it can be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. TESTS: can be run with **mvn clean test**
+## Building the project
 
-**API Usage:** You can use Postman to add items to the 'postcode' db.
+- Run **mvn spring-boot:run** on the command line*
+
+*the project can be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. TESTS can be run with **mvn clean test**
+
+## **API Usage:** 
+
+- You can use Postman to add items to the 'postcode' db.
 
 
 **1 - ADD a postcode**
