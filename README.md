@@ -98,21 +98,39 @@ if NOT:
 
 **5. CHECK if a postcode follows all the formatting rules (e.g like Q,V,X not being in the first position etc.)** 
 
+```html
 GET http://localhost:9191/checkViaRegex/{postCode}
+```
+e.g. 
+```html
+GET http://localhost:9191/checkViaRegex/W5 1AT
+```
+RETURNS **200** HTTP Status<br/>
+RETURNS **Boolean**<br/>
+if FORMATTED CORRECTLY:
+```html
+True
+```
+if NOT:
+```html
+False
+```
 
-i.e. checkViaRegex/W5 1AT
-
-RETURNS boolean TRUE if postcode follows all formatting rules, FALSE if not
+---
 
 
 **6. Format a post code (capitalizes, adds space between outer and inner code, removes non alphanumerics etc.)**
 
+
+```html
 GET http://localhost:9191/formatPostCode/{postCode}
-
-i.e. formatPostCode/w51at
-
-RETURNS "W5 1AT"
-
-i.e. formatPostCode/w/51a\*t
-
-RETURNS "W5 1AT"
+```
+e.g. 
+```html
+GET http://localhost:9191/formatPostCode/w51*at
+```
+RETURNS **200** HTTP Status<br/>
+RETURNS **String**<br/>
+```html
+W5 1AT
+```
