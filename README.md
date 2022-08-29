@@ -45,11 +45,11 @@ POST http://localhost:9191/deletePostCode/W5 1AT
 ```
 RETURNS **200** HTTP Status<br/>
 RETURNS **Integer**<br/>
-if deleted:
+if DELETED:
 ```html
 1
 ```
-if not:
+if NOT:
 ```html
 0
 ```
@@ -71,14 +71,30 @@ RETURNS **JSON**
 {"id": 1, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
 ```
 
+---
+
 **4. CHECK if a postcode is in the database**
 
+```html
 GET http://localhost:9191/checkViaDatabase/{postCode}
+```
+e.g. 
+```html
+GET http://localhost:9191/checkViaDatabase/W5 1AT
+```
 
-i.e. checkViaDatabase/W5 1AT
+RETURNS **200** HTTP Status<br/>
+RETURNS **Integer**<br/>
+if FOUND:
+```html
+1
+```
+if NOT:
+```html
+0
+```
 
-RETURNS Integer 1 if found, 0 if false
-
+---
 
 **5. CHECK if a postcode follows all the formatting rules (e.g like Q,V,X not being in the first position etc.)** 
 
