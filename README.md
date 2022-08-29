@@ -13,7 +13,7 @@
 
 - Run **mvn spring-boot:run** on the command line*
 
-*the project can also be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. TESTS can be run with **mvn clean test**
+  *the project can also be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. TESTS can be run with **mvn clean test**
 
 ## **API Usage:** 
 
