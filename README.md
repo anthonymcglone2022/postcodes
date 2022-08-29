@@ -44,7 +44,7 @@ e.g.
 POST http://localhost:9191/deletePostCode/W5 1AT
 ```
 RETURNS **200** HTTP Status<br/>
-RETURNS **Integer**
+RETURNS **Integer**<br/>
 if deleted:
 ```html
 1
@@ -68,7 +68,7 @@ POST http://localhost:9191/updatePostCode
 RETURNS **200** HTTP Status<br/>
 RETURNS **JSON**
 ```html
-{"id": databaseRecordId, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
+{"id": 1, "code": "W5 1AT","inuse": "No","district": "Some district in London"}
 ```
 
 **4. CHECK if a postcode is in the database**
