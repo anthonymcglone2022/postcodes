@@ -45,9 +45,13 @@ POST http://localhost:9191/deletePostCode/W5 1AT
 ```
 RETURNS **200** HTTP Status<br/>
 RETURNS **Integer**
+if deleted:
 ```html
-1 if deleted
-0 if not
+1
+```
+if not:
+```html
+0
 ```
 
 ---
