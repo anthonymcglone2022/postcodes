@@ -6,14 +6,14 @@
 
 ## Pre-requisites before building the project
 
-- Create a local MySQL instance, with user **root** and password **toor** (OR edit the application.properties user/ schema.sql with your DB's credentials)
+- Create a local MySQL instance, with user **root** and password **toor** (OR edit the application.properties' user & schema.sql with your DB's credentials)
 - Install Maven 3 and Java 11
 
 ## Building the project
 
 - Run **mvn spring-boot:run** on the command line*
 
-  *the project can also be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. TESTS can be run with **mvn clean test**
+  *the project can also be imported to Spring Tool Suite (Eclipse or other IDEs) and run within it. **Tests** can be run with **mvn clean test**
 
 ## **API Usage:** 
 
