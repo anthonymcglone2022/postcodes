@@ -1,7 +1,7 @@
 # What is the postcodes repository?
 
 - A RESTful API with a database for storing UK Postcodes
-- Can be used to validate any UK Postcode (**on initilization, we read in 2 million postcodes from data.sql**)
+- Can be used to validate any UK Postcode (**on initialisation, we read in 2 million postcodes from data.sql**)
 - Technology built with Spring Boot, JPA, Hibernate and MySQL
 
 ## Pre-requisites before building the project
