@@ -45,11 +45,12 @@ POST http://localhost:9191/deletePostCode/W5 1AT
 ```
 RETURNS **200** HTTP Status<br/>
 RETURNS **Integer**<br/>
-if DELETED:
+
+IF DELETED:
 ```html
 1
 ```
-if NOT:
+IF NOT:
 ```html
 0
 ```
@@ -85,11 +86,12 @@ GET http://localhost:9191/checkViaDatabase/W5 1AT
 
 RETURNS **200** HTTP Status<br/>
 RETURNS **Integer**<br/>
-if FOUND:
+
+IF FOUND:
 ```html
 1
 ```
-if NOT:
+IF NOT:
 ```html
 0
 ```
@@ -107,11 +109,12 @@ GET http://localhost:9191/checkViaRegex/W5 1AT
 ```
 RETURNS **200** HTTP Status<br/>
 RETURNS **Boolean**<br/>
-if FORMATTED CORRECTLY:
+
+IF FORMATTED CORRECTLY:
 ```html
 True
 ```
-if NOT:
+IF NOT:
 ```html
 False
 ```
