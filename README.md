@@ -98,7 +98,7 @@ IF NOT:
 
 ---
 
-**5. CHECK if a postcode follows all the formatting rules (e.g like Q,V,X not being in the first position etc.)** 
+**5. CHECK if a postcode follows all the formatting rules (e.g. Q,V,X not being in the first position etc.)** 
 
 ```html
 GET http://localhost:9191/checkViaRegex/{postCode}
@@ -122,7 +122,7 @@ False
 ---
 
 
-**6. Format a post code (capitalizes, adds space between outer and inner code, removes non alphanumerics etc.)**
+**6. Format a postcode (capitalizes, adds space between outer and inner code, removes non-alphanumerics etc.)**
 
 
 ```html
