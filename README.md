@@ -7,7 +7,7 @@
 ## Pre-requisites before building the project
 
 - Create a local MySQL instance, with user **root** and password **toor** (OR edit the application.properties' user & schema.sql with your DB's credentials)
-- Install Maven 3 and Java 11
+- Install [Maven 3](https://maven.apache.org/index.html) and [Java](https://www.oracle.com/java/technologies/downloads/)
 
 ## Building the project
 
