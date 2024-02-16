@@ -2,13 +2,14 @@
 
 - A RESTful API with a database for storing UK Postcodes
 - Can be used to validate any UK Postcode (**on initialisation, we read in 2 million postcodes from data.sql**)
-- Technology built with Spring Boot, JPA, Hibernate, MySQL and Docker
+- Technology built with Maven, Spring Boot, JPA, Hibernate, MySQL and Docker
 
 ## Running the project with Docker
 
 - Install [Docker](https://docs.docker.com/)
-- Navigate to the directory with the Dockefile 
-- Run `docker build -t java-webserver .`. Then run `docker run -d -p 9191:9191 java-webserver`
+- Navigate to the directory with the `Dockerfile` 
+- Run `docker build -t java-webserver .`
+- Run `docker run -d -p 9191:9191 java-webserver`
 
 ## Pre-requisites before building the project [non-Docker]
 
