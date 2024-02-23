@@ -9,7 +9,7 @@
 - Install [Docker](https://docs.docker.com/)
 - Navigate to the directory with the `Dockerfile` 
 - Run `docker build -t java-webserver .`
-- Run `docker run -d -p 9191:9191 java-webserver`
+- Run `docker run --name java-server -d -p 9191:9191 java-webserver`
 
 ## Pre-requisites before building the project [non-Docker]
 
