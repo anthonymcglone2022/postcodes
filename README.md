@@ -11,12 +11,12 @@
 - Run `docker build -t java-webserver .`
 - Run `docker run --name java-server -d -p 9191:9191 java-webserver`
 
-## Pre-requisites before building the project [non-Docker]
+## Pre-requisites before building the project [old instructions]
 
 - Create a local MySQL instance, with user **root** and password **toor** (OR edit the application.properties' user & schema.sql with your DB's credentials)
 - Install [Maven 3](https://maven.apache.org/index.html) and [Java](https://www.oracle.com/java/technologies/downloads/)
 
-## Building the project [non-Docker]
+## Building the project [old instructions]
 
 - Run **mvn spring-boot:run** on the command line*
 
