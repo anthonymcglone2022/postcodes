@@ -1,6 +1,6 @@
 # What is the postcodes repository?
 
-- A RESTful API with a database for storing UK Postcodes
+- A RESTful API with a database for storing UK Postcodes (**TODO**: extend this to / or replace it with [eircodes](https://www.eircode.ie/))
 - Can be used to validate any UK Postcode (**on initialisation, we read in 2 million postcodes from data.sql**)
 - Technology built with Maven, Spring Boot, JPA, Hibernate, MySQL and Docker
 
